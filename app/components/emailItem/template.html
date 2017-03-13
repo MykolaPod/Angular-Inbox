@@ -1,0 +1,28 @@
+<div class="email-item-short" ng-show="$ctrl.viewModel.isShortView" ng-click="$ctrl.toggleExpandItem()">
+    <div class="col-md-4">
+        <p class="short-text">
+            <strong>
+                {{$ctrl.viewModel.email.subject}}
+            </strong>
+        </p>
+    </div>
+    <div class="col-md-8">
+        <p class="short-text hidden-sm hidden-xs" ng-bind-html="$ctrl.viewModel.email.snippet">{{$ctrl.viewModel.email.snippet}}</p>
+    </div>
+</div>
+<div class="email-item-full" ng-show="!$ctrl.viewModel.isShortView" ng-click="$ctrl.toggleExpandItem()">
+    <div class="">
+        <div class="container inherited-width">
+            <div class="row">
+                <p class="padding-10">
+                    <strong>{{$ctrl.viewModel.email.receivedDateTimeISOString}}</strong> <u>{{$ctrl.viewModel.email.subject}}</u>
+                </p>
+            </div>
+            <div class="row">
+                <div class="container email-container" ng-bind-html="$ctrl.viewModel.email.body"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

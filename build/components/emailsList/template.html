@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="sk-double-bounce" ng-show="$ctrl.viewModel.isLoading">
+                <div class="sk-child sk-double-bounce1"></div>
+                <div class="sk-child sk-double-bounce2"></div>
+            </div>
+
+            <div class="margin-top-30 adjust-height-by-content" infinite-scroll='$ctrl.getEmailsNextPage()' infinite-scroll-disabled='$ctrl.isLoading' infinite-scroll-distance='1'>
+                <div ng-repeat="emailGroup in $ctrl.viewModel.emailGroups">
+                    <div class="col-md-10 col-md-offset-1 email">
+                        <h3><span class="label label-info inbox-blue" ng-show="emailGroup.emails.length > 0">{{emailGroup.groupName}} <span class="badge inbox-blue">{{emailGroup.emails.length}}</span></span></h3>
+                        <email-item ng-repeat="emaildata in emailGroup.emails"  emaildata="{email:emaildata}"></email-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

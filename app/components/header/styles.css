@@ -1,0 +1,32 @@
+.navbar{
+    border-radius: 0px;
+    -webkit-box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 6px 7px -4px rgba(0, 0, 0,0.75);
+    height: 50px;
+}
+.navbar a{
+    color:white;
+}
+.navbar-nav.active{
+    background-color: #5677FC;
+}
+.nav>li>a:focus, .nav>li>a:hover{
+    background-color: #5677FC;
+}
+.active{
+    font-weight: 600;
+}
+.icon-bar{
+    background-color: white;
+}
+.staic-header{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    font-family: Roboto, arial, sans-serif;
+    font-size: 16px;
+}
+.navbar-brand{
+    font-size: inherit;
+}

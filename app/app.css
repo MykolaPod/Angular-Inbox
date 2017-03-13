@@ -1,0 +1,46 @@
+/* app css stylesheet */
+body{
+  background-color: #ECECEC;
+}
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+.adjust-height-by-content{
+  overflow: auto;
+}
+
+.sk-double-bounce{
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  top: 37%;
+  left: 47%;
+  z-index: 1;
+  margin: 0;
+}
+.inbox-blue{
+  background-color: #5677FC;
+}
+.header-height-50{
+  height: 50px;
+}

@@ -1,0 +1,17 @@
+<div class="nav navbar-nav navbar-right">
+    <div class="account-info" ng-show="$ctrl.viewModel.isSignedIn">
+        <a class="user-name" href="{{$ctrl.viewModel.profileUrl}}">{{$ctrl.viewModel.userName}}</a>
+        <img class="img-circle" src="{{$ctrl.viewModel.userProfileImageUrl}}">
+
+        <a class="sign-out" ng-click="$ctrl.signOut()"><span class="glyphicon glyphicon-log-out" ></span> Log out</a>
+    </div>
+    <div class="header-height-50" ng-show="!$ctrl.viewModel.isSignedIn">
+        <div class="inline-block">
+            <div id="singInButton"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
